@@ -13,13 +13,16 @@ public class SimpleTest {
         driver.manage().window().maximize();
         driver.get("https://accounts.google.com/ServiceLogin?service=mail&continue=https://mail.google.com/mail/&hl=ru#identifier");
 
-        WebElement searchField = driver.findElement(By.cssSelector(".//*[@id='Email']"));
-        searchField.clear();
-        searchField.sendKeys("deny_kingston@gmail.com");
+        WebElement addaccountButton = driver.findElement(By.cssSelector("#account-chooser-add-account"));
+        addaccountButton.click();
+
+        WebElement loginField = driver.findElement(By.cssSelector("#Email"));
+        loginField.clear();
+        loginField.sendKeys("deny_kingston@gmail.com");
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-        WebElement searchButton = driver.findElement(By.cssSelector(".//*[@id='next']"));
-        searchButton.click();
+        WebElement nextButton = driver.findElement(By.cssSelector("#next"));
+        nextButton.click();
 
     }
 }
