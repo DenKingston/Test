@@ -16,12 +16,12 @@ public class LoginPage  {
         this.driver = driver;
     }
 
-    public void typeUsername() {
-        driver.findElement(userNameLocator).sendKeys("denykingston@gmail.com");
+    public void typeUsername(String uid) {
+        driver.findElement(userNameLocator).sendKeys(uid);
     }
 
-    public void typePassword() {
-        driver.findElement(passwordLocator).sendKeys("p0lumorphp0lumorph");
+    public void typePassword(String pass) {
+        driver.findElement(passwordLocator).sendKeys(pass);
     }
 
     public void typeNextButton() {

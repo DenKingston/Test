@@ -19,9 +19,9 @@ public class SimpleTest {
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         driver.get("https://accounts.google.com/ServiceLogin?service=mail&continue=https://mail.google.com/mail/&hl=ru#identifier");
         LoginPage login = new LoginPage(driver);
-        login.typeUsername();
+        login.typeUsername("denykingston@gmail.com");
         login.typeNextButton();
-        login.typePassword();
+        login.typePassword("p0lumorphp0lumorph");
         login.clickSignInButton();
     }
 }
